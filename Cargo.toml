@@ -1,0 +1,25 @@
+[package]
+description = "WebAssembly Template for web, working with wasm-pack"
+edition = "2018"
+license = "MIT"
+name = "wasm-pack-web-template"
+repository = "https://github.com/ragingwind/wasm-pack-web-template"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.78"
+wasm-bindgen-futures = "0.4.24"
+reqwest = { version = "0.11", features = ["json"] }
+
+[dependencies.web-sys]
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
+version = "0.3.4"
